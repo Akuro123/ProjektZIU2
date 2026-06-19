@@ -4,7 +4,7 @@ TaskFlow to responsywna aplikacja webowa do zarządzania zadaniami, przygotowana
 
 ## Linki
 
-* **Demo aplikacji:** TODO: wklej link do Rendera, np. `https://twoja-aplikacja.onrender.com`
+* **Demo aplikacji:** TODO: wklej link do Rendera, np. `https://projektziu2.onrender.com/`
 * **Repozytorium GitHub:** TODO: wklej link do publicznego repozytorium
 * **Projekt Figma:** TODO: wklej link do lo-fi / hi-fi / user flow
 * **Notatka UX:** dostępna w aplikacji w widoku `/about`
