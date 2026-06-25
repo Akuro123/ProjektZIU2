@@ -4,10 +4,10 @@ TaskFlow to responsywna aplikacja webowa do zarządzania zadaniami, przygotowana
 
 ## Linki
 
-* **Demo aplikacji:** TODO: wklej link do Rendera, np. `https://projektziu2.onrender.com/`
-* **Repozytorium GitHub:** TODO: wklej link do publicznego repozytorium
-* **Projekt Figma:** TODO: wklej link do lo-fi / hi-fi / user flow
-* **Notatka UX:** dostępna w aplikacji w widoku `/about`
+- **Demo aplikacji:** TODO: wklej link do Rendera, np. `https://projektziu2.onrender.com/`
+- **Repozytorium GitHub:** TODO: wklej link do publicznego repozytorium
+- **Projekt Figma:** TODO: wklej link do lo-fi / hi-fi / user flow
+- **Notatka UX:** dostępna w aplikacji w widoku `/about`
 
 ## Cel projektu
 
@@ -17,29 +17,28 @@ Projekt pokazuje zastosowanie nowoczesnych technologii frontendowych, obsługę 
 
 ## Główne funkcjonalności
 
-* Rejestracja i logowanie użytkownika.
-* Dashboard z listą zadań.
-* Dodawanie nowych zadań.
-* Oznaczanie zadań jako ukończone.
-* Usuwanie zadań.
-* Filtrowanie zadań:
+- Rejestracja i logowanie użytkownika.
+- Dashboard z listą zadań.
+- Dodawanie nowych zadań.
+- Oznaczanie zadań jako ukończone.
+- Usuwanie zadań.
+- Filtrowanie zadań:
+  - wszystkie,
+  - aktywne,
+  - ukończone,
+  - wysokiego priorytetu.
 
-  * wszystkie,
-  * aktywne,
-  * ukończone,
-  * wysokiego priorytetu.
-* Wyszukiwanie zadań.
-* Przełączanie widoku listy / siatki.
-* Kategorie i priorytety zadań.
-* Komunikaty sukcesu i błędu.
-* Tryb jasny i ciemny.
-* Responsywny layout na desktopie i mobile.
-* Widoki dodatkowe:
-
-  * profil,
-  * powiadomienia,
-  * pomoc,
-  * opis UX projektu.
+- Wyszukiwanie zadań.
+- Przełączanie widoku listy / siatki.
+- Kategorie i priorytety zadań.
+- Komunikaty sukcesu i błędu.
+- Tryb jasny i ciemny.
+- Responsywny layout na desktopie i mobile.
+- Widoki dodatkowe:
+  - profil,
+  - powiadomienia,
+  - pomoc,
+  - opis UX projektu.
 
 ## Stack technologiczny
 
@@ -228,12 +227,12 @@ Formularze w projekcie są obsługiwane przez React Hook Form, a walidacja przez
 
 Walidowane są między innymi:
 
-* wymagany tytuł zadania,
-* długość pól tekstowych,
-* priorytet zadania,
-* kategoria zadania,
-* data wykonania,
-* poprawność przesyłanych danych do API.
+- wymagany tytuł zadania,
+- długość pól tekstowych,
+- priorytet zadania,
+- kategoria zadania,
+- data wykonania,
+- poprawność przesyłanych danych do API.
 
 Walidacja znajduje się zarówno po stronie klienta, jak i po stronie endpointów API. Dzięki temu aplikacja nie opiera się wyłącznie na walidacji frontendowej.
 
@@ -243,12 +242,12 @@ Do obsługi stanu danych użyto TanStack Query.
 
 TanStack Query odpowiada za:
 
-* pobieranie zadań,
-* cache danych,
-* stany `loading`,
-* stany `success`,
-* stany `error`,
-* odświeżanie danych po dodaniu, edycji lub usunięciu zadania.
+- pobieranie zadań,
+- cache danych,
+- stany `loading`,
+- stany `success`,
+- stany `error`,
+- odświeżanie danych po dodaniu, edycji lub usunięciu zadania.
 
 Lokalne stany interfejsu, takie jak otwarcie modala, aktualny filtr lub widok listy/siatki, są obsługiwane przez React `useState`.
 
@@ -260,12 +259,12 @@ Aplikacja została zaprojektowana responsywnie.
 
 Zastosowane rozwiązania:
 
-* layout desktopowy z bocznym menu,
-* mobilny drawer zamiast stałego sidebaru,
-* breakpointy Tailwind CSS,
-* widok listy i siatki,
-* elastyczne karty zadań,
-* przyciski i elementy interaktywne dostosowane do ekranów dotykowych.
+- layout desktopowy z bocznym menu,
+- mobilny drawer zamiast stałego sidebaru,
+- breakpointy Tailwind CSS,
+- widok listy i siatki,
+- elastyczne karty zadań,
+- przyciski i elementy interaktywne dostosowane do ekranów dotykowych.
 
 Aplikacja jest wygodna zarówno na komputerze, jak i na urządzeniach mobilnych.
 
@@ -273,17 +272,17 @@ Aplikacja jest wygodna zarówno na komputerze, jak i na urządzeniach mobilnych.
 
 W projekcie zastosowano elementy poprawiające dostępność:
 
-* semantyczny HTML,
-* elementy takie jak `main`, `nav`, `aside`, `header`,
-* `aria-label` dla przycisków ikonowych,
-* `aria-pressed` dla przełączników i filtrów,
-* `aria-current` dla aktywnych elementów nawigacji,
-* widoczny stan fokusu,
-* obsługa klawiaturą,
-* `skip-link` do przejścia do głównej treści,
-* komponenty Radix UI wspierające focus-trap i obsługę klawiatury,
-* wsparcie `prefers-reduced-motion`,
-* tryb jasny i ciemny z zachowaniem czytelności.
+- semantyczny HTML,
+- elementy takie jak `main`, `nav`, `aside`, `header`,
+- `aria-label` dla przycisków ikonowych,
+- `aria-pressed` dla przełączników i filtrów,
+- `aria-current` dla aktywnych elementów nawigacji,
+- widoczny stan fokusu,
+- obsługa klawiaturą,
+- `skip-link` do przejścia do głównej treści,
+- komponenty Radix UI wspierające focus-trap i obsługę klawiatury,
+- wsparcie `prefers-reduced-motion`,
+- tryb jasny i ciemny z zachowaniem czytelności.
 
 TODO: po wykonaniu audytu uzupełnić:
 
@@ -296,14 +295,14 @@ AXE: TODO, np. brak błędów krytycznych
 
 W projekcie zastosowano mikrointerakcje poprawiające odbiór aplikacji:
 
-* animacje przejść,
-* efekty hover,
-* feedback po kliknięciu,
-* loading spinner,
-* komunikaty sukcesu,
-* komunikaty błędów,
-* toasty po akcjach użytkownika,
-* płynne otwieranie dialogów i menu.
+- animacje przejść,
+- efekty hover,
+- feedback po kliknięciu,
+- loading spinner,
+- komunikaty sukcesu,
+- komunikaty błędów,
+- toasty po akcjach użytkownika,
+- płynne otwieranie dialogów i menu.
 
 Do animacji wykorzystano bibliotekę Motion oraz przejścia CSS.
 
@@ -313,9 +312,9 @@ Projekt został poprzedzony etapem projektowym w Figmie.
 
 TODO: uzupełnij po dodaniu linku:
 
-* **Lo-fi:** szkic podstawowego układu aplikacji i rozmieszczenia elementów.
-* **Hi-fi:** finalny projekt interfejsu z kolorystyką, komponentami i typografią.
-* **User flow:** przepływ użytkownika od logowania do zarządzania zadaniami.
+- **Lo-fi:** szkic podstawowego układu aplikacji i rozmieszczenia elementów.
+- **Hi-fi:** finalny projekt interfejsu z kolorystyką, komponentami i typografią.
+- **User flow:** przepływ użytkownika od logowania do zarządzania zadaniami.
 
 Link do Figmy:
 
@@ -333,20 +332,20 @@ Anna, 27 lat, pracuje hybrydowo i codziennie zarządza wieloma małymi zadaniami
 
 ### Kluczowe decyzje projektowe
 
-* Najważniejsza akcja, czyli dodanie zadania, jest łatwo dostępna.
-* Priorytety i kategorie pomagają szybciej rozpoznawać typ zadania.
-* Filtry pozwalają ograniczyć liczbę widocznych zadań.
-* Toasty i loadingi informują użytkownika o stanie systemu.
-* Widok mobilny używa drawer menu, aby nie zabierać miejsca na ekranie.
-* Tryb ciemny poprawia komfort pracy w różnych warunkach.
+- Najważniejsza akcja, czyli dodanie zadania, jest łatwo dostępna.
+- Priorytety i kategorie pomagają szybciej rozpoznawać typ zadania.
+- Filtry pozwalają ograniczyć liczbę widocznych zadań.
+- Toasty i loadingi informują użytkownika o stanie systemu.
+- Widok mobilny używa drawer menu, aby nie zabierać miejsca na ekranie.
+- Tryb ciemny poprawia komfort pracy w różnych warunkach.
 
 ### Odniesienie do heurystyk Nielsena
 
-* **Widoczność statusu systemu:** komunikaty sukcesu, błędu i loading.
-* **Spójność i standardy:** powtarzalne komponenty UI i ikony.
-* **Rozpoznawanie zamiast przypominania:** widoczne filtry i statusy zadań.
-* **Zapobieganie błędom:** walidacja formularzy.
-* **Pomoc w rozpoznawaniu i naprawianiu błędów:** czytelne komunikaty walidacyjne.
+- **Widoczność statusu systemu:** komunikaty sukcesu, błędu i loading.
+- **Spójność i standardy:** powtarzalne komponenty UI i ikony.
+- **Rozpoznawanie zamiast przypominania:** widoczne filtry i statusy zadań.
+- **Zapobieganie błędom:** walidacja formularzy.
+- **Pomoc w rozpoznawaniu i naprawianiu błędów:** czytelne komunikaty walidacyjne.
 
 ## Spełnienie wymagań projektowych
 
@@ -390,7 +389,7 @@ Projekt indywidualny — Zaawansowany Interfejs Użytkownika
 
 Projekt gotowy do prezentacji po uzupełnieniu:
 
-* linku do publicznego demo,
-* linku do publicznego repozytorium GitHub,
-* linku do projektu Figma,
-* wyniku audytu Lighthouse lub AXE.
+- linku do publicznego demo,
+- linku do publicznego repozytorium GitHub,
+- linku do projektu Figma,
+- wyniku audytu Lighthouse lub AXE.

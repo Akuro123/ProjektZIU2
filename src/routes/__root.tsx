@@ -75,7 +75,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "theme-color", content: "#6366f1" },
       { title: "TaskFlow — zarządzaj zadaniami" },
-      { name: "description", content: "TaskFlow — elegancka aplikacja do zarządzania zadaniami z REST API i trwałym zapisem w bazie." },
+      {
+        name: "description",
+        content:
+          "TaskFlow — elegancka aplikacja do zarządzania zadaniami z REST API i trwałym zapisem w bazie.",
+      },
       { property: "og:title", content: "TaskFlow" },
       { property: "og:description", content: "Zarządzaj zadaniami z REST API." },
       { property: "og:type", content: "website" },

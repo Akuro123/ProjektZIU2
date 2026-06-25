@@ -355,7 +355,6 @@ function AppLayout() {
                     onClick={() => setOpen(false)}
                     className="flex h-11 w-11 items-center justify-center rounded-lg text-sidebar-foreground transition-colors hover:bg-sidebar-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                     aria-label="Zamknij menu"
-                    autoFocus
                   >
                     <X className="h-5 w-5" aria-hidden="true" />
                   </button>
