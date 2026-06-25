@@ -1,7 +1,7 @@
 import { createClient } from "@supabase/supabase-js";
 import type { User } from "@supabase/supabase-js";
 import type { Database } from "./types";
-
+import WebSocket from "ws";
 export type SupabaseRequestContext = {
   supabase: ReturnType<typeof createSupabaseRequestClient>;
   user: User;
@@ -50,6 +50,9 @@ function createSupabaseRequestClient(token: string) {
       storage: undefined,
       persistSession: false,
       autoRefreshToken: false,
+    },
+    realtime: {
+      transport: WebSocket as never,
     },
   });
 }

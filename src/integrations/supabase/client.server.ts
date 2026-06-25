@@ -2,6 +2,7 @@
 // Server-side Supabase client. Uses a service role key when available, otherwise
 // falls back to the publishable key so local/demo builds can run without Lovable.
 import { createClient } from "@supabase/supabase-js";
+import WebSocket from "ws";
 import type { Database } from "./types";
 
 function createSupabaseAdminClient() {
@@ -9,11 +10,14 @@ function createSupabaseAdminClient() {
     process.env.SUPABASE_URL ??
     process.env.VITE_SUPABASE_URL ??
     process.env.NEXT_PUBLIC_SUPABASE_URL;
+
   const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
   const SUPABASE_PUBLISHABLE_KEY =
     process.env.SUPABASE_PUBLISHABLE_KEY ??
     process.env.VITE_SUPABASE_PUBLISHABLE_KEY ??
     process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+
   const SUPABASE_KEY = SUPABASE_SERVICE_ROLE_KEY ?? SUPABASE_PUBLISHABLE_KEY;
 
   if (!SUPABASE_URL || !SUPABASE_KEY) {
@@ -25,8 +29,11 @@ function createSupabaseAdminClient() {
           ]
         : []),
     ];
+
     const message = `Missing Supabase environment variable(s): ${missing.join(", ")}.`;
+
     console.error(`[Supabase] ${message}`);
+
     throw new Error(message);
   }
 
@@ -42,6 +49,9 @@ function createSupabaseAdminClient() {
       persistSession: false,
       autoRefreshToken: false,
     },
+    realtime: {
+      transport: WebSocket as never,
+    },
   });
 }
 
@@ -53,6 +63,7 @@ let _supabaseAdmin: ReturnType<typeof createSupabaseAdminClient> | undefined;
 export const supabaseAdmin = new Proxy({} as ReturnType<typeof createSupabaseAdminClient>, {
   get(_, prop, receiver) {
     if (!_supabaseAdmin) _supabaseAdmin = createSupabaseAdminClient();
+
     return Reflect.get(_supabaseAdmin, prop, receiver);
   },
 });

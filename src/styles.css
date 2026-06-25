@@ -48,11 +48,11 @@
 :root {
   --radius: 0.75rem;
 
-  /* Brand: indigo + violet (TaskFlow) */
-  --primary: oklch(0.62 0.19 277);
+  /* Brand: darker indigo/violet for WCAG AA contrast with white text */
+  --primary: oklch(0.48 0.2 277);
   --primary-foreground: oklch(1 0 0);
-  --primary-hover: oklch(0.55 0.21 277);
-  --secondary: oklch(0.66 0.21 300);
+  --primary-hover: oklch(0.43 0.2 277);
+  --secondary: oklch(0.5 0.22 300);
   --secondary-foreground: oklch(1 0 0);
 
   --background: oklch(0.985 0.005 250);
@@ -63,35 +63,37 @@
   --popover-foreground: oklch(0.18 0.03 260);
 
   --muted: oklch(0.965 0.005 260);
-  --muted-foreground: oklch(0.5 0.02 260);
+  --muted-foreground: oklch(0.45 0.025 260);
   --accent: oklch(0.96 0.01 260);
-  --accent-foreground: oklch(0.25 0.03 260);
+  --accent-foreground: oklch(0.22 0.03 260);
   --border: oklch(0.92 0.01 260);
   --input: oklch(0.92 0.01 260);
-  --ring: oklch(0.62 0.19 277);
+  --ring: oklch(0.48 0.2 277);
 
-  --destructive: oklch(0.6 0.22 27);
+  /* Darker red for contrast on pale red backgrounds */
+  --destructive: oklch(0.42 0.2 27);
   --destructive-foreground: oklch(1 0 0);
 
-  --priority-high: oklch(0.6 0.22 27);
-  --priority-high-bg: oklch(0.95 0.04 27);
-  --priority-medium: oklch(0.68 0.16 65);
-  --priority-medium-bg: oklch(0.96 0.06 75);
-  --priority-low: oklch(0.55 0.02 260);
+  /* Priority colors adjusted for axe color-contrast checks */
+  --priority-high: oklch(0.42 0.2 27);
+  --priority-high-bg: oklch(0.965 0.025 27);
+  --priority-medium: oklch(0.45 0.14 65);
+  --priority-medium-bg: oklch(0.965 0.045 75);
+  --priority-low: oklch(0.42 0.025 260);
   --priority-low-bg: oklch(0.96 0.005 260);
 
   --sidebar: oklch(1 0 0);
   --sidebar-foreground: oklch(0.18 0.03 260);
-  --sidebar-primary: oklch(0.62 0.19 277);
+  --sidebar-primary: oklch(0.48 0.2 277);
   --sidebar-primary-foreground: oklch(1 0 0);
   --sidebar-accent: oklch(0.96 0.01 260);
-  --sidebar-accent-foreground: oklch(0.25 0.03 260);
+  --sidebar-accent-foreground: oklch(0.22 0.03 260);
   --sidebar-border: oklch(0.92 0.01 260);
 
   --shadow-sm: 0 1px 2px 0 oklch(0.2 0.04 260 / 0.05);
   --shadow-md: 0 4px 6px -1px oklch(0.2 0.04 260 / 0.08), 0 2px 4px -1px oklch(0.2 0.04 260 / 0.04);
   --shadow-lg: 0 10px 24px -8px oklch(0.2 0.04 260 / 0.12);
-  --shadow-xl: 0 20px 40px -12px oklch(0.62 0.19 277 / 0.25);
+  --shadow-xl: 0 20px 40px -12px oklch(0.48 0.2 277 / 0.25);
   --gradient-brand: linear-gradient(135deg, var(--primary), var(--secondary));
 }
 
@@ -102,48 +104,77 @@
   --card-foreground: oklch(0.96 0.005 250);
   --popover: oklch(0.24 0.03 260);
   --popover-foreground: oklch(0.96 0.005 250);
+
   --primary: oklch(0.7 0.18 277);
-  --primary-foreground: oklch(1 0 0);
-  --primary-hover: oklch(0.62 0.19 277);
-  --secondary: oklch(0.72 0.18 300);
-  --secondary-foreground: oklch(1 0 0);
+  --primary-foreground: oklch(0.12 0.03 260);
+  --primary-hover: oklch(0.76 0.16 277);
+  --secondary: oklch(0.74 0.17 300);
+  --secondary-foreground: oklch(0.12 0.03 260);
+
   --muted: oklch(0.26 0.03 260);
-  --muted-foreground: oklch(0.7 0.02 260);
+  --muted-foreground: oklch(0.76 0.02 260);
   --accent: oklch(0.32 0.03 260);
   --accent-foreground: oklch(0.96 0.005 250);
   --border: oklch(0.32 0.03 260);
   --input: oklch(0.36 0.03 260);
   --ring: oklch(0.7 0.18 277);
-  --destructive: oklch(0.65 0.22 27);
-  --destructive-foreground: oklch(1 0 0);
-  --priority-high: oklch(0.72 0.2 27);
-  --priority-high-bg: oklch(0.32 0.1 27);
-  --priority-medium: oklch(0.78 0.16 70);
-  --priority-medium-bg: oklch(0.32 0.08 70);
-  --priority-low: oklch(0.7 0.02 260);
+
+  --destructive: oklch(0.72 0.2 27);
+  --destructive-foreground: oklch(0.12 0.03 260);
+
+  --priority-high: oklch(0.82 0.16 27);
+  --priority-high-bg: oklch(0.28 0.1 27);
+  --priority-medium: oklch(0.84 0.14 70);
+  --priority-medium-bg: oklch(0.3 0.08 70);
+  --priority-low: oklch(0.78 0.02 260);
   --priority-low-bg: oklch(0.3 0.02 260);
+
   --sidebar: oklch(0.24 0.03 260);
   --sidebar-foreground: oklch(0.96 0.005 250);
   --sidebar-primary: oklch(0.7 0.18 277);
-  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-primary-foreground: oklch(0.12 0.03 260);
   --sidebar-accent: oklch(0.32 0.03 260);
   --sidebar-accent-foreground: oklch(0.96 0.005 250);
   --sidebar-border: oklch(0.32 0.03 260);
 }
 
 @layer base {
-  * { border-color: var(--color-border); }
-  body { background-color: var(--color-background); color: var(--color-foreground); }
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+
   .visually-hidden {
-    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-    overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
+
   .skip-link {
-    position: absolute; left: -9999px; top: 0;
-    background: var(--primary); color: var(--primary-foreground);
-    padding: 0.5rem 1rem; z-index: 100; border-radius: 0.5rem;
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--primary);
+    color: var(--primary-foreground);
+    padding: 0.5rem 1rem;
+    z-index: 100;
+    border-radius: 0.5rem;
   }
-  .skip-link:focus { left: 0.5rem; top: 0.5rem; }
+
+  .skip-link:focus {
+    left: 0.5rem;
+    top: 0.5rem;
+  }
 
   :focus-visible {
     outline: 2px solid var(--ring);
@@ -152,11 +183,30 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
     }
   }
+}
+
+/* Accessibility contrast fixes for generated utility combinations */
+
+/* Shopping badge: amber text on pale amber background */
+.bg-amber-500\/10.text-amber-700 {
+  color: oklch(0.34 0.11 65) !important;
+}
+
+/* Sonner success toast title: darker green on light success background */
+[data-sonner-toast][data-rich-colors="true"] [data-title] {
+  color: oklch(0.32 0.12 145) !important;
+}
+
+/* Keep toast description readable too */
+[data-sonner-toast][data-rich-colors="true"] [data-description] {
+  color: oklch(0.34 0.05 145) !important;
 }

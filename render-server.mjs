@@ -88,7 +88,8 @@ async function sendFetchResponse(res, response) {
 const server = createServer(async (req, res) => {
   try {
     const url = new URL(req.url ?? "/", `http://${req.headers.host ?? "localhost"}`);
-    const staticFile = req.method === "GET" || req.method === "HEAD" ? getStaticFile(url.pathname) : null;
+    const staticFile =
+      req.method === "GET" || req.method === "HEAD" ? getStaticFile(url.pathname) : null;
 
     if (staticFile) {
       if (req.method === "HEAD") {
